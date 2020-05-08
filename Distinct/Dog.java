@@ -9,6 +9,8 @@ public class Dog {
 
     @Override
     public boolean equals(Object o) {
+          if (this == o)
+                    return true;
 
         if (o == null || getClass() != o.getClass())
             return false;
@@ -23,10 +25,7 @@ public class Dog {
                 return Objects.equals(this.age, dog.age);
             }
             case NONE:
-            default:
-                if (this == o)
-                    return true;
-
+            default:           
                 return Objects.equals(this.name, dog.name) && Objects.equals(this.age, dog.age);
         }
     }
