@@ -1,39 +1,8 @@
-package lesso8;
-
-import java.util.Objects;
+package p;
 
 public class Dog {
-    private static Fields paramOfUnique;
     private String name;
     private Integer age;
-
-    @Override
-    public boolean equals(Object o) {
-          if (this == o)
-                    return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
-        Dog dog = (Dog) o;
-
-        switch (paramOfUnique) {
-            case NAME:
-                return Objects.equals(this.name, dog.name);
-            case AGE: {
-                System.out.println(1);
-                return Objects.equals(this.age, dog.age);
-            }
-            case NONE:
-            default:           
-                return Objects.equals(this.name, dog.name) && Objects.equals(this.age, dog.age);
-        }
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, age);
-    }
 
     @Override
     public String toString() {
@@ -50,11 +19,7 @@ public class Dog {
         this.name = name;
         this.age = age;
     }
-
-    public static void setParamOfUnique(Fields paramOfUnique) {
-        Dog.paramOfUnique = paramOfUnique;
-    }
-
+    
     public String getName() {
         return name;
     }
@@ -71,3 +36,4 @@ public class Dog {
         this.age = age;
     }
 }
+
