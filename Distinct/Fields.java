@@ -1,4 +1,4 @@
-package lesso8;
+package p;
 
 public enum Fields {
     NAME,
